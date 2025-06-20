@@ -1,5 +1,6 @@
 module Example
 export hello, domath
+export extended, extended_too
 
 """
     hello(who::String)
@@ -14,5 +15,9 @@ hello(who::String) = "Hello, $who"
 Return `x + 5`.
 """
 domath(x::Number) = x + 5
+
+function extended end
+function extended_too end
+
 
 end
