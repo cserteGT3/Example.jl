@@ -1,6 +1,9 @@
 using Documenter, Example
+using StaticArraysCore
 
-makedocs(modules = [Example],
+makedocs(modules = [Example,
+        isdefined(Base, :get_extension) ? Base.get_extension(Example, :StaticArraysCoreExt) :
+        Example.StaticArraysCoreExt],
          sitename = "Example.jl",
          format = Documenter.HTML()
          )
